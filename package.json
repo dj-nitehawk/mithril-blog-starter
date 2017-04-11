@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run server:dev",
-    "server:dev": "cross-env NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d --watch",
+    "server:dev": "cross-env NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -d",
     "server:prod": "cross-env NODE_ENV=production node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js -p",
     "build:dev": "cross-env NODE_ENV=development webpack -d",
     "build:prod": "cross-env NODE_ENV=production webpack -p"

@@ -23,3 +23,7 @@ m.route(document.body, '/', {
     '/post/:id': PostDisplay,
     '/post/edit/:id': PostEdit
 })
+
+if (module.hot) {
+    module.hot.accept();
+}

@@ -1,10 +1,17 @@
-var webpack = require("webpack");
+let webpack = require("webpack");
+let { resolve } = require('path');
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: __dirname,
+        path: resolve(__dirname, 'wwwroot'),
+        publicPath: '/',
         filename: 'app.js'
+    },
+    devServer: {
+        contentBase: resolve(__dirname, 'wwwroot'),
+        port: 8080,
+        hot: true
     },
     module: {
         rules: [
@@ -24,7 +31,9 @@ module.exports = {
     plugins: [
         new webpack.EnvironmentPlugin([
             'NODE_ENV'
-        ])
+        ]),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
     ]
 };
 

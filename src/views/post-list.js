@@ -22,7 +22,7 @@ export default class PostList {
     view() {
         return (
             <div>
-                <h1>My Posts:</h1>
+                <h1>M Posts:</h1>
                 <ul>
                     {this.RenderPosts()}
                 </ul>

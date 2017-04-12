@@ -11,14 +11,14 @@ class App {
     view() {
         return (
             <div>
-                <h1>My Blog</h1>
+                <h1 class="text-right">My Blog</h1>
                 <PostList />
             </div>
         )
     }
 }
 
-m.route(document.body, '/', {
+m.route(document.getElementById('container'), '/', {
     '/': App,
     '/post/:id': PostDisplay,
     '/post/edit/:id': PostEdit

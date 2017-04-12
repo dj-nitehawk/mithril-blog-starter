@@ -10,7 +10,7 @@ export default class PostList {
     RenderPosts() {
         return Blog.PostList.map(post => {
             return (
-                <li>
+                <li class="list-group-item">
                     <a href={`/post/${post.id}`} oncreate={m.route.link}>
                         {post.title}
                     </a>
@@ -22,8 +22,8 @@ export default class PostList {
     view() {
         return (
             <div>
-                <h1>M Posts:</h1>
-                <ul>
+                <h1 class="font-italic bg-info text-white">My Posts:</h1>
+                <ul class="list-group">
                     {this.RenderPosts()}
                 </ul>
             </div>
